@@ -35,7 +35,7 @@ In modern days, with the explosion of information, it is extremely time consumin
 
 * DATA VISUALIZATION
 
-We render out result in a well-formatted pdf file with clickable links, images and text. 
+	We render out result in a well-formatted pdf file with clickable links, images and text. 
 
 
 ### Complexity: 
