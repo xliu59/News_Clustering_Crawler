@@ -6,15 +6,15 @@
 
 ### Domain:
 
-	Our project focuses on building an intelligent web news crawler whose goal is to find the latest, hottest technology news. This crawler can crawl through the main news authorities (such as New York Times, CNN, BBC) and group similar news together base on their similarity.
+Our project focuses on building an intelligent web news crawler whose goal is to find the latest, hottest technology news. This crawler can crawl through the main news authorities (such as New York Times, CNN, BBC) and group similar news together base on their similarity.
 
 ### Run our code:
 
-	We have made a bash script that have connected all the scripts in our project in order. Just run this script by $ bash run.sh. Easy and efficient!
+We have made a bash script that have connected all the scripts in our project in order. Just run this script by $ bash run.sh. Easy and efficient!
 
 ### Motivation:
 
-	In modern days, with the explosion of information, it is extremely time consuming to read all news from different news websites. Especially many of them report news with different titles but almost the same contents. To save people’s time and energy, we may try to collect news from different websites and compare their similarities so as to generate a report for certain date’s news with less redundancy and provide links in case people want to read deeply. 
+In modern days, with the explosion of information, it is extremely time consuming to read all news from different news websites. Especially many of them report news with different titles but almost the same contents. To save people’s time and energy, we may try to collect news from different websites and compare their similarities so as to generate a report for certain date’s news with less redundancy and provide links in case people want to read deeply. 
 
 ### Sample Result: 
 ![sample result](./PDF_Generator/sample.png "Sample page")
