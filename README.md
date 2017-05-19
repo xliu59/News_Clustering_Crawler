@@ -18,7 +18,8 @@ In modern days, with the explosion of information, it is extremely time consumin
 
 ### Highlights:
 * Filtering
-In our crawler we have made the following rules to make sure the news fetched back is the most accurate, latest, hottest and related news in the technology field from different major news authorities on the internet.
+
+	In our crawler we have made the following rules to make sure the news fetched back is the most accurate, latest, hottest and related news in the technology field from different major news authorities on the internet.
   1)	only select news posted within 7 days from today
   2)	only within certain depth of crawling 
   3)	only within a certain news authority domain
@@ -26,11 +27,11 @@ In our crawler we have made the following rules to make sure the news fetched ba
 
 * Cached data
 
-We used database (sqlite3) to store crawled urls and data to avoid having to requesting the same web page again and again (performing politeness). Each time a new url is to be crawled, it is first checked in the cache database to determine new or old. 
+	We used database (sqlite3) to store crawled urls and data to avoid having to requesting the same web page again and again (performing politeness). Each time a new url is to be crawled, it is first checked in the cache database to determine new or old. 
 	
 * Clustering by similarity
 
-We calculated the similarity of each pair of doc vectors and performed ranking in two times, first rank all doc vectors by the summation of similarity for each vector (ranking the rows), then rank all other vectors by their similarity to this current vector. In the process, zero similarities are excluded and each vector can only belong to one final cluster in order for duplication-free (which, in effect, “saves our readers time”).
+	We calculated the similarity of each pair of doc vectors and performed ranking in two times, first rank all doc vectors by the summation of similarity for each vector (ranking the rows), then rank all other vectors by their similarity to this current vector. In the process, zero similarities are excluded and each vector can only belong to one final cluster in order for duplication-free (which, in effect, “saves our readers time”).
 
 * DATA VISUALIZATION
 
