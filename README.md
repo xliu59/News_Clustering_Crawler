@@ -42,8 +42,8 @@ In modern days, with the explosion of information, it is extremely time consumin
 
 
 ### Complexity: 
-1.	Our crawler can automatically extract and uniform certain data from complex html structures from different websites.
-2.	As the second major part of our project, we used our own tools (such as tokenizer) first generate the required materials for computing similarity, which includes raw, tokenized doc, hist and title files. With these srouce material, we next calculate the similarity, cluster together similar ones and then performed ranking.
+1)	Our crawler can automatically extract and uniform certain data from complex html structures from different websites.
+1)	As the second major part of our project, we used our own tools (such as tokenizer) first generate the required materials for computing similarity, which includes raw, tokenized doc, hist and title files. With these srouce material, we next calculate the similarity, cluster together similar ones and then performed ranking.
 
 
 
