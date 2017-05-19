@@ -94,12 +94,9 @@ class CrawlerCache(object):
         store the content for a given domain and relative url
         """
         try:
-            #if domain == 'money.cnn.com':
-            #    temp = 'http://' + domain + url
-            #else:
-            temp = 'http://' + domain + url
+            full_url = 'http://' + domain + url
             self.cursor.execute("INSERT OR REPLACE INTO sites VALUES (?,?,?,?,?)",
-            (domain, temp, html, title, image))
+            (domain, full_url, html, title, image))
             self.conn.commit()
         except Exception as e:
 #            print "fail to insert data to db, may already exist!"
@@ -144,7 +141,7 @@ class Crawler(object):
         self.content = {}
         self.cache = cache
         self.count = 0
-        self.check_date_list = ['www.bbc.com',]
+        self.check_date_list = ['www.bbc.com','money.cnn.com']
 
     def crawl(self, url, no_cache=None, only_cache=None):
         """
@@ -248,11 +245,22 @@ class Crawler(object):
             outfile.write(json.dumps(res_list))
 
     def check_date(self, html, depth, url):
+#        print ("url=", url)
+#        print ("checking date...")
         parser = DateParser()
         parser.feed(html)
         if depth == self.depth:
             return True
+        elif re.match("^/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*\.html$", url):
+            url_date = datetime.strptime(url[1:11], "%Y/%m/%d")
+#            print ("url_date=", url_date)
+            if url_date >= datetime.now() - timedelta(days=7) \
+                and url_date <= datetime.now() + timedelta(days=1):
+                return True
+            else:
+                return False
         elif parser.article_date == None:
+            print ("parser skipped")
             return False
         else:
 #            print ("need to check date, url=", url, "depth=", depth)

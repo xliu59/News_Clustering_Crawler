@@ -18,7 +18,7 @@ cp res.json ../PDF_Generator/
 cd ../token/
 
 python3 token.py
-python3 tokenize.py articles.raw
+python3 my_tokenize.py articles.raw
 perl make_hist.prl < articles.tokenized > articles.tokenized.hist
 
 cd ../similarity/
